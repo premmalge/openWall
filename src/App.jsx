@@ -53,10 +53,15 @@ export default function App() {
         setUser={setUser}
       />
 
-      <div className="pt-24 px-6">
-        {activeTab === "confessions" && <ConfessionsPage />}
-        {activeTab === "thoughts" && <ThoughtsPage user={user} />}
-        {activeTab === "chat" && <ChatPage user={user} />}
+      {/* Responsive Content Wrapper */}
+      <div className="pt-20 px-4 sm:px-6 md:px-8">
+        <div className="max-w-5xl mx-auto">
+
+          {activeTab === "confessions" && <ConfessionsPage />}
+          {activeTab === "thoughts" && <ThoughtsPage user={user} />}
+          {activeTab === "chat" && <ChatPage user={user} />}
+
+        </div>
       </div>
 
     </div>
